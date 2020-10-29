@@ -14,131 +14,127 @@
           <span class="title">Dashboard<span style="font-weight: 200"> Aluno</span></span>
           </div>
         </div>
-        <div class="layout-content" style="height: 900px; padding-bottom: 20px;">
-          <div class="col col-4" style="height: 100%">
-            <div class="card" style="height: 415px">
-              <h3>Exercícios</h3>
-              <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="exercicios-chart.html" height="90%" width="100%"></iframe>
-          </div>
-          <div class="card" style="width: calc(200% + 2rem); height: 400px;">
-              <h3 style="margin:0">Aulas</h3>
-              <h4 style="font-weight: 200; margin: 0">média de erros até acertar</h4>
-              <iframe id="igraph2" scrolling="no" style="border:none;" seamless="seamless" src="aulas-chart.html" height="90%" width="100%"></iframe>
-          </div>
-          </div>
-          <div class="col col-4" style="height: 450px">
-              <div style="display: flex;">
-                <div class="col-6" style="height: 190px;">
-                  <div class="card" style="border-left: 4px solid limegreen; height: 180px; margin-right: 15px; overflow-y: auto;">
-                      <h3 style="margin: 0">Tempo médio</h3>
-                      <h4 style="font-weight: 200;">para fazer um exercício</h4>
+        <div class="layout-content" style="height: 900px; padding-bottom: 20px; flex-wrap: wrap;">
+          <div style="width: 100%; display: flex;">
+            <div class="col col-4">
+              <div class="card" style="height: 415px; margin-bottom: 0">
+                <h3>Exercícios</h3>
+                <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="exercicios-chart.html" height="90%" width="100%"></iframe>
+              </div>
+            </div>
+            <div class="col col-2">
+              <div class="card" style="border-left: 4px solid limegreen; height: 190px; min-width: 220px; overflow-y: auto;">
+                    <h3 style="margin: 0">Tempo médio</h3>
+                    <h4 style="font-weight: 200;">para fazer um exercício</h4>
                     <div style="display: flex; flex-wrap: wrap; text-align: center;">
-                      <div style="text-align: center; line-height: 1.8rem; margin-top: 1rem; width: 90%; display: flex; justify-content: space-around; flex-wrap: wrap; align-items: center;">
-                        <div>
-                          <div style="font-weight: 500; font-size: 2rem;">3 min</div><div style="font-size: 1.1rem; font-weight: 300">Você</div>
-                        </div>
-                        <div>
+                    <div style="text-align: center; line-height: 1.8rem; margin-top: 1rem; width: 90%; display: flex; justify-content: space-around; flex-wrap: wrap; align-items: center;">
+                    <div>
+                      <div style="font-weight: 500; font-size: 2rem;">3 min</div><div style="font-size: 1.1rem; font-weight: 300">Você</div>
+                    </div>
+                    <div>
                           <div style="font-weight: 400; font-size: 1.5rem;">4 min</div><div style="font-size: 1rem; font-weight: 300">Sua turma</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6" style="height: 190px;">
-                  <div class="card" style="border-left: 4px solid #2196F3; height: 180px; margin-left: 15px; overflow-y: auto;">
-                      <h3 style="margin: 0">Tempo médio</h3>
-                      <h4 style="font-weight: 200">para finalizar uma aula</h4>
-                    <div style="display: flex; flex-wrap: wrap; text-align: center;">
-                      <div style="text-align: center; line-height: 1.8rem; margin-top: 1rem; width: 90%; display: flex; justify-content: space-around; flex-wrap: wrap; align-items: center;">
-                        <div>
-                          <div style="font-weight: 500; font-size: 2rem;">2 dias</div><div style="font-size: 1.1rem; font-weight: 300">Você</div>
-                        </div>
-                        <div>
-                          <div style="font-weight: 400; font-size: 1.5rem;">2 dias</div><div style="font-size: 1rem; font-weight: 300">Sua turma</div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div style="height: 210px">
-                <div class="card" style="border-left: 4px solid red; margin-top: 1rem; overflow-y: auto; height: 210px">
-                    <div style="display: flex; justify-content: center; flex-wrap: wrap; text-align: center;">
-                      <h3 style="width: 100%; text-align: left; margin">Erros</h3>
-                      <div class="col-6" style="width: 50% min-width: 200px;">
-                        <div style="padding: 0 1rem; font-weight: 200; font-size: 1.1rem">mais comuns (python)</div>
-                        <div style="font-weight: 500; font-size: 2.2rem; padding: 0 1rem;">SyntaxError</div>
-                        <div style="font-size: 1.9rem; padding: 0 1rem;">NameError</div>
-                      </div>
-                      <div class="col-6" style="width: 50%; min-width: 200px; border-left: 1px solid rgb(222,226,230)">
-                        <div style="padding: 0 1rem; font-weight: 200; font-size: 1.1rem">até acertar</div>
-                        <div style="font-weight: 500; font-size: 2.6rem; padding: 0 1rem;">5 erros</div>
-                        <div style="padding: 0 1rem; font-weight: 200; font-size: 1.4rem">em média</div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="card" style="border-left: 4px solid red; height: 190px; min-width: 220px; overflow-y: auto; margin-bottom: 0">
+                  <h3 style="margin: 0">Erros</h3>
+                  <h4 style="font-weight: 200;">até acertar um exercício</h4>
+                  <div style="font-weight: 500; font-size: 2.6rem; text-align: center;">5 erros</div>
+                  <div style="font-weight: 200; font-size: 1.4rem; text-align: center; line-height: 1rem;">em média</div>
               </div>
-          </div>
-          <div class="col col-4" style="height: 100%">
-            <div class="card" style="height: 850px">
+            </div>
+            <div class="col col-6">
+            <div class="card" style="height: 415px; margin-bottom: 0">
               <div>
               <h3>Aulas</h3>
-              <div style="overflow-y: auto; height: 750px">
+              <div style="overflow-y: auto; height: 330px">
               <table>
+                <tr>
+                  <td style="padding-bottom: 0.5rem; padding-left: 1rem;">Nome</td>
+                  <td style="padding-bottom: 0.5rem; padding-left: 1rem">Progresso</td>
+                  <td style="padding-bottom: 0.5rem; text-align: center;">Tempo</td>
+                </tr>
                 <tr class="row">
-                  <td class="col-7">Função</td>
-                  <td class="col-5" style="text-align: right;">
+                  <td class="col-6">Função</td>
+                  <td class="col-4" style="text-align: right;">
                     <div class="task-progress col-3" style="width: 100%"><div style="width: 100%; background: limegreen"></div></div><span>100%</span>
+                  </td>
+                  <td class="col-2" style="text-align: center;">3 dias</td>
+                </tr>
+                <tr class="row">
+                  <td class="col-6">Tipos de dados, strings, estrutura condicional </td>
+                  <td class="col-4" style="text-align: right;">
+                    <div class="task-progress col-3" style="width: 100%"><div style="width: 100%; background: limegreen"></div></div><span>100%</span>
+                  <td class="col-2" style="text-align: center;">4 dias</td>
                   </td>
                 </tr>
                 <tr class="row">
-                  <td class="col-7">Tipos de dados, strings, estrutura condicional </td>
-                  <td class="col-5" style="text-align: right;">
+                  <td class="col-6">Variáveis e atribuição, strings </td>
+                  <td class="col-4" style="text-align: right;">
+                    <div class="task-progress col-3" style="width: 100%"><div style="width: 100%;  background: limegreen"></div></div><span>100%</span></td>
+                  <td class="col-2" style="text-align: center;">2 dias</td>
+                <tr class="row">
+                  <td class="col-6">Manipulação de strings, tuplas e listas</td>
+                  <td class="col-4" style="text-align: right;">
                     <div class="task-progress col-3" style="width: 100%"><div style="width: 100%; background: limegreen"></div></div><span>100%</span>
                   </td>
+                  <td class="col-2" style="text-align: center;">3 dias</td>
                 </tr>
                 <tr class="row">
-                  <td class="col-7">Variáveis e atribuição, strings </td>
-                  <td class="col-5" style="text-align: right;">
-                    <div class="task-progress col-3" style="width: 100%"><div style="width: 100%;  background: limegreen"></div></div><span>100%</span>
-                <tr class="row">
-                  <td class="col-7">Manipulação de strings, tuplas e listas</td>
-                  <td class="col-5" style="text-align: right;">
-                    <div class="task-progress col-3" style="width: 100%"><div style="width: 100%; background: limegreen"></div></div><span>100%</span>
-                  </td>
-                </tr>
-                <tr class="row">
-                  <td class="col-7">Listas</td>
-                  <td class="col-5" style="text-align: right;">
+                  <td class="col-6">Listas</td>
+                  <td class="col-4" style="text-align: right;">
                     <div class="task-progress col-3" style="width: 100%"><div style="width: 90%;"></div></div><span>90%</span>
                   </td>
+                  <td class="col-2" style="text-align: center;"></td>
                 </tr>
                 <tr class="row">
-                  <td class="col-7">Estrutura de repetição - while</td>
-                  <td class="col-5" style="text-align: right;">
+                  <td class="col-6">Estrutura de repetição - while</td>
+                  <td class="col-4" style="text-align: right;">
                     <div class="task-progress col-3" style="width: 100%"><div style="width: 50%;"></div></div><span>50%</span>
                   </td>
+                  <td class="col-2" style="text-align: center;"></td>
                 </tr>
                 <tr class="row">
-                  <td class="col-7">Estrutura de Repetição - for</td>
-                  <td class="col-5" style="text-align: right;">
+                  <td class="col-6">Estrutura de Repetição - for</td>
+                  <td class="col-4" style="text-align: right;">
                     <div class="task-progress col-3" style="width: 100%"><div style="width: 15%;"></div></div><span>15%</span>
+                  </td>
+                  <td class="col-2" style="text-align: center;"></td>
                 <tr class="row">
-                  <td class="col-7">Laços aninhados e matrizes</td>
-                  <td class="col-5" style="text-align: right;">
+                  <td class="col-6">Laços aninhados e matrizes</td>
+                  <td class="col-4" style="text-align: right;">
                     <div class="task-progress col-3" style="width: 100%"><div style="width: 5%;"></div></div><span>5%</span>
                   </td>
+                  <td class="col-2" style="text-align: center;"></td>
                 </tr>
                 <tr class="row">
-                  <td class="col-7">Dicionário</td>
-                  <td class="col-5" style="text-align: right;">
+                  <td class="col-6">Dicionário</td>
+                  <td class="col-4" style="text-align: right;">
                     <div class="task-progress col-3" style="width: 100%"><div style="width: 0%;"></div></div><span>0%</span>
                   </td>
+                  <td class="col-2" style="text-align: center;"></td>
                 </tr>
               </table>
               </div>
               </div>
             </div>
+          </div>
+          </div>
+          <div style="width: 100%; display: flex;">
+            <div class="col col-6" style="margin-top: 0">
+              <div class="card" style="height: 415px; margin-top: 0">
+                <h3 style="margin:0">Aulas</h3>
+                <h4 style="font-weight: 200; margin: 0">média de erros até acertar um exercício</h4>
+                <iframe id="igraph2" scrolling="no" style="border:none;" seamless="seamless" src="aulas-erros.html" height="90%" width="100%"></iframe>
+              </div>
+            </div>
+            <div class="col col-6" style="margin-top: 0">
+              <div class="card" style="height: 415px; margin-top: 0">
+                <h3 style="margin:0">Aulas</h3>
+                <h4 style="font-weight: 200; margin: 0">tempo para finalizar as aulas</h4>
+                <iframe id="igraph3" scrolling="no" style="border:none;" seamless="seamless" src="aulas-tempo.html" height="90%" width="100%"></iframe>
+              </div>
             </div>
           </div>
         </div>

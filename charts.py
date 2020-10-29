@@ -113,7 +113,81 @@ fig2.update_layout(autosize=True,
                    ),
                    plot_bgcolor='white',
                    xaxis_title='Aula',
+                   xaxis = dict(
+                     tickmode = 'linear',
+                     dtick = 1),
                    yaxis_title='Erros',
+                   yaxis = dict(
+                     tickmode = 'linear',
+                     tick0 = 0,
+                     dtick = 1),
+                   font=dict(family="Nunito",
+                             size=14,
+                             color='rgb(76,83,90)'),
+                   hoverlabel=dict(bgcolor='white',
+                                   font_size=15,
+                                   font_family='Nunito'))
+
+aulas = [1,2,3,4,5,6,7,8,9,10,11,12]
+tempos = [3,4,2,3]
+tempos_turma = [4,3,2,2]
+
+colors = []
+for i in range(len(tempos)):
+  if tempos[i] == tempos_turma[i]:
+    colors.append('#2196F3');
+  elif tempos[i] < tempos_turma[i]:
+    colors.append('limegreen')
+  else:
+    colors.append('red')
+#2196F3
+#64B5F6
+
+fig3 = go.Figure()
+
+fig3.add_trace(go.Scatter(name='Sua turma',
+                          x=aulas,
+                          y=tempos_turma,
+                          line_shape='linear',
+                          line = dict(color='rgb(200,200,200)', width=5),
+                          marker = dict(size=15, color='rgb(200,200,200)'),
+                          hoverinfo='y'))
+
+fig3.add_trace(go.Scatter(name='Você',
+                          x=aulas,
+                          y=tempos,
+                          line_shape='linear',
+                          line = dict(color='#2196F3', width=5),
+                          marker = dict(size=15, color=colors),
+                          hoverinfo='y'))
+
+fig3.update_layout(autosize=True,
+                   margin=dict(
+                      l=10,
+                      r=10,
+                      b=10,
+                      t=0,
+                      pad=4
+                   ),
+                   legend=dict(
+                      traceorder='reversed',
+                      yanchor="top",
+                      y=0.99,
+                      xanchor="right",
+                      x=0.99,
+                      orientation="h",
+                      font=dict(size=16)
+                   ),
+                   plot_bgcolor='white',
+                   xaxis_title='Aula',
+                   xaxis = dict(
+                     tickmode = 'linear',
+                     dtick = 1),
+                   yaxis_title='Tempo (dias)',
+                   yaxis = dict(
+                     tickmode = 'linear',
+                     tick0 = 1,
+                     dtick = 1),
                    font=dict(family="Nunito",
                              size=14,
                              color='rgb(76,83,90)'),
@@ -122,4 +196,5 @@ fig2.update_layout(autosize=True,
                                    font_family='Nunito'))
 
 fig.write_html("exercicios-chart.html", config={'displayModeBar': False})
-fig2.write_html("aulas-chart.html", config={'displayModeBar': False})
+fig2.write_html("aulas-erros.html", config={'displayModeBar': False})
+fig3.write_html("aulas-tempo.html", config={'displayModeBar': False})
